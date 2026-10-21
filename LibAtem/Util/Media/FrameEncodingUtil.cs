@@ -52,7 +52,7 @@ namespace LibAtem.Util.Media
             for (int i = 0; i < 8; i++)
                 res[pos + i] = 0xfe;
 
-            byte[] size = BitConverter.GetBytes(count).Reverse().ToArray();
+            byte[] size = ((IEnumerable<byte>)BitConverter.GetBytes(count)).Reverse().ToArray();
             Array.Copy(size, 0, res, pos + 8, 8);
         }
 
