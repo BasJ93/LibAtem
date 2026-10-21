@@ -1,0 +1,16 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageVersion Include="FatAntelope" Version="1.0.7273.22226" />
+        <PackageVersion Include="log4net" Version="2.0.17" />
+        <PackageVersion Include="Makaretu.Dns.Multicast" Version="0.27.0" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0" />
+        <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+        <PackageVersion Include="System.Xml.XmlSerializer" Version="4.3.0" />
+        <PackageVersion Include="xunit" Version="2.8.1" />
+        <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.1" />
+    </ItemGroup>
+</Project>

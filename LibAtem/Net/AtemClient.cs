@@ -75,6 +75,32 @@ namespace LibAtem.Net
             return true;
         }
 
+        public bool IsConnected()
+        {
+            try
+            {
+                lock (_connection)
+                {
+                    if (_connection.HasTimedOut)
+                    {
+                        return false;
+                    }
+
+                    if (_connection.ConnectionVersion != null)
+                    {
+                        return true;
+                    }
+
+                }
+            }
+            catch (SocketException e)
+            {
+                Log.DebugFormat("Failed to reconnect: {0}", e);
+            }
+            
+            return false;
+        }
+        
         private bool Reconnect()
         {
             try

@@ -6,6 +6,9 @@ namespace LibAtem.Commands
     [CommandName("TlIn", CommandDirection.ToClient), NoCommandId]
     public class TallyByInputCommand : ICommand
     {
+        /// <summary>
+        /// The tuple consists of the format (bool Program, bool Preview).
+        /// </summary>
         public List<Tuple<bool, bool>> Tally { get; set; }
 
         public void Serialize(ByteArrayBuilder cmd)
